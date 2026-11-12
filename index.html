@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гранфорд - Защита бамперов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Скрытая кнопка для входа в админ панель -->
+    <a href="#" class="admin-link-btn" onclick="showLogin()">Админ-панель</a>
+
+    <!-- ЭКРАН ВХОДА -->
+    <div id="login-screen" class="login-screen" style="display: none;">
+        <div class="login-box">
+            <h2>Вход в панель</h2>
+            <input type="text" id="login-user" placeholder="Логин (admin)">
+            <input type="password" id="login-pass" placeholder="Пароль (1234)">
+            <button class="btn btn-dark" onclick="doLogin()">Войти</button>
+            <button class="btn btn-outline" onclick="hideLogin()">На главную</button>
+        </div>
+    </div>
+
+    <!-- ОСНОВНОЙ САЙТ -->
+    <div id="main-site">
+        <!-- Шапка -->
+        <header>
+            <div class="logo">
+                <h1>Гранфорд</h1>
+            </div>
+            <nav>
+                <a href="#">О компании</a>
+                <a href="#">Преимущества</a>
+                <a href="#">Продукция</a>
+                <a href="#">Индивидуальный заказ</a>
+            </nav>
+            <button type="button" class="btn btn-dark">Оставить заявку</button>
+        </header>
+
+        <main>
+            <!-- Главный экран -->
+            <section class="hero container">
+                <div class="hero-text">
+                    <h1>Защита бамперов для китайских внедорожников и пикапов</h1>
+                    <h3>Нержавеющая сталь AISI 304 с зеркальной полировкой и чёрный металл с порошковым покрытием. Установка
+                        без сверления.</h3>
+                    <div class="hero-btns">
+                        <button type="button" class="btn btn-dark">Смотреть продукцию</button>
+                        <button type="button" class="btn btn-outline">Индивидуальный заказ</button>
+                    </div>
+                </div>
+                <img class="hero-image" src="img/hero-image.png" alt="Защита бампера">
+            </section>
+
+            <!-- Преимущества -->
+            <section class="features container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="img/feature-1.svg" alt="">
+                        <h3>Качественные материалы — AISI 304, порошковое покрытие.</h3>
+                    </div>
+                    <div class="feature-card">
+                        <img src="img/feature-2.svg" alt="">
+                        <h3>Установка без сверления — штатные крепления, без доработки кузова.</h3>
+                    </div>
+                    <div class="feature-card">
+                        <img src="img/feature-3.svg" alt="">
+                        <h3>Комплект или «под ключ» — покупка отдельно или с установкой.</h3>
+                    </div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="img/feature-4.svg" alt="">
+                        <h3>Доставка по всей России — транспортные компании.</h3>
+                    </div>
+                    <div class="feature-card">
+                        <img src="img/feature-5.svg" alt="">
+                        <h3>Индивидуальная разработка — под любую модель.</h3>
+                    </div>
+                    <div class="feature-card">
+                        <img src="img/feature-6.svg" alt="">
+                        <h2>Специализация на китайском автопроме — JAC, Haval и др.</h2>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Продукция -->
+            <section class="products container">
+                <!-- Карточка 1 -->
+                <div class="product-card">
+                    <img class="product-image" src="img/product-jac.png" alt="">
+                    <h3>JAC T9</h3>
+                    <p>Защита переднего и заднего бампера</p>
+                    <div class="material-toggles">
+                        <button type="button" class="active">AISI 304</button>
+                        <button type="button">Чёрный металл</button>
+                    </div>
+                    <button type="button" class="btn-order">Заказать</button>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="product-card">
+                    <img class="product-image" src="img/product-haval.png" alt="">
+                    <h3>Haval H3</h3>
+                    <p>Защита переднего и заднего бампера</p>
+                    <div class="material-toggles">
+                        <button type="button" class="active">AISI 304</button>
+                        <button type="button">Чёрный металл</button>
+                    </div>
+                    <button type="button" class="btn-order">Заказать</button>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="product-card">
+                    <img class="product-image" src="img/product-custom.png" alt="">
+                    <h3>Нет вашей модели?</h3>
+                    <p>Разработаем и изготовим защиту под конкретный автомобиль</p>
+                    <div style="flex-grow: 1;"></div>
+                    <button type="button" class="btn-order">Оставить запрос</button>
+                </div>
+            </section>
+
+            <!-- Секция "Как мы работаем" -->
+            <section class="how-we-work container">
+                <h2>Как мы работаем</h2>
+                <h3 style="margin-bottom: 40px;">От заявки до установки — 4 шага</h3>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <img src="img/step-1.svg" class="step-icon" alt="Заявка">
+                        <div class="step-title">Заявка</div>
+                    </div>
+                    <div class="step">
+                        <img src="img/step-2.svg" class="step-icon" alt="Согласование">
+                        <div class="step-title">Согласование</div>
+                    </div>
+                    <div class="step">
+                        <img src="img/step-3.svg" class="step-icon" alt="Изготовление">
+                        <div class="step-title">Изготовление</div>
+                    </div>
+                    <div class="step">
+                        <img src="img/step-4.svg" class="step-icon" alt="Установка">
+                        <div class="step-title">Установка</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Форма -->
+            <section class="contact-section">
+                <div class="container">
+                    <h2>Разработаем и изготовим под конкретный автомобиль</h2>
+                    <div class="form-container">
+                        <div class="form-left">
+                            <div class="form-group">
+                                <label>Имя</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Телефон</label>
+                                <input type="tel">
+                            </div>
+                            <div class="form-group">
+                                <label>Почта</label>
+                                <input type="email">
+                            </div>
+                            <div class="form-group">
+                                <label>Модель авто</label>
+                                <input type="text">
+                            </div>
+                            <button type="submit" class="btn-submit">Отправить</button>
+                        </div>
+
+                        <div class="form-right">
+                            <div class="form-group">
+                                <label>Комментарий</label>
+                                <textarea></textarea>
+                            </div>
+                            <div class="material-group">
+                                <button type="button" class="active">AISI 304</button>
+                                <button type="button">Чёрный металл</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer>
+            <div class="container footer-content">
+                <div class="logo">
+                    <h1>Гранфорд</h1>
+                </div>
+                <nav>
+                    <a href="#">О компании</a>
+                    <a href="#">Преимущества</a>
+                    <a href="#">Продукция</a>
+                    <a href="#">Индивидуальный заказ</a>
+                </nav>
+                <div class="footer-contacts">
+                    <h4>телефон: <a href="tel:+79004564554">+7 900 456-45-54</a></h4>
+                    <h4>email: <a href="mailto:Avtosila53@mail.com">Avtosila53@mail.com</a></h4>
+                    <h4 class="social-icons">
+                        мессенджеры: 
+                        <a href="#"><img src="img/icon-whatsapp.png" alt="WhatsApp"></a>
+                        <a href="#"><img src="img/icon-vk.png" alt="VK"></a>
+                    </h4>
+                    <h4>© Название, 2025. Политика конфиденциальности</h4>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- АДМИН ПАНЕЛЬ -->
+    <div id="admin-panel" class="admin-wrapper" style="display: none;">
+        
+        <div class="admin-header-title">Админ Панель управления</div>
+        <div class="admin-header-subtitle" style="margin-top: 0;">о товаре</div>
+
+        <div class="admin-panel-container">
+            
+            <!-- Секция "О товаре" -->
+            <div class="admin-section">
+                <div class="admin-box">
+                    <div class="admin-input-group">
+                        <label>Заголовок</label>
+                        <input type="text" value="Защита бамперов для китайских внедорожников и пикапов">
+                    </div>
+                </div>
+                <div class="admin-box">
+                    <div class="admin-input-group">
+                        <label>Описание</label>
+                        <textarea>Нержавеющая сталь AISI 304 с зеркальной полировкой и чёрный металл с порошковым покрытием. Установка без сверления.</textarea>
+                    </div>
+                </div>
+                <div class="admin-box" style="display: flex; align-items: center; gap: 20px;">
+                    <img src="img/hero-image.png" style="width: 100px; height: 100px; object-fit: contain; border: 1px dashed var(--Gray);" alt="О товаре">
+                    <button class="btn btn-dark" style="font-size: 14px; padding: 10px 20px;">выбрать картинку</button>
+                </div>
+            </div>
+
+            <div class="admin-header-subtitle">Преимущества</div>
+
+            <!-- Секция "Преимущества" -->
+            <div class="admin-section">
+                <div class="admin-features-grid">
+                    <!-- Карточка 1 -->
+                    <div class="admin-feature-card">
+                        <div class="admin-card-actions">
+                            <img src="img/icon-check.svg" alt="Активно">
+                            <img src="img/icon-trash.svg" alt="Удалить">
+                        </div>
+                        <div style="position: relative;">
+                            <img src="img/feature-1.svg" class="admin-img-placeholder" alt="Фото">
+                            <button class="btn-small">Вставить фото</button>
+                        </div>
+                        <input type="text" value="Качественные материалы — AISI 304, порошковое покрытие." style="width: 100%; padding: 10px; border: 1px solid var(--Gray); border-radius: 5px; color: var(--Graphite);">
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="admin-feature-card">
+                        <div class="admin-card-actions">
+                            <img src="img/icon-check.svg" alt="Активно">
+                            <img src="img/icon-trash.svg" alt="Удалить">
+                        </div>
+                        <div style="position: relative;">
+                            <img src="img/feature-2.svg" class="admin-img-placeholder" alt="Фото">
+                            <button class="btn-small">Вставить фото</button>
+                        </div>
+                        <input type="text" value="Установка без сверления — штатные крепления, без доработки кузова." style="width: 100%; padding: 10px; border: 1px solid var(--Gray); border-radius: 5px; color: var(--Graphite);">
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="admin-feature-card">
+                        <div class="admin-card-actions">
+                            <img src="img/icon-check.svg" alt="Активно">
+                            <img src="img/icon-trash.svg" alt="Удалить">
+                        </div>
+                        <div style="position: relative;">
+                            <img src="img/feature-3.svg" class="admin-img-placeholder" alt="Фото">
+                            <button class="btn-small">Вставить фото</button>
+                        </div>
+                        <input type="text" value="Комплект или «под ключ» — покупка отдельно или с установкой." style="width: 100%; padding: 10px; border: 1px solid var(--Gray); border-radius: 5px; color: var(--Graphite);">
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div class="admin-feature-card">
+                        <div class="admin-card-actions">
+                            <img src="img/icon-check.svg" alt="Активно">
+                            <img src="img/icon-trash.svg" alt="Удалить">
+                        </div>
+                        <div style="position: relative;">
+                            <img src="img/feature-4.svg" class="admin-img-placeholder" alt="Фото">
+                            <button class="btn-small">Вставить фото</button>
+                        </div>
+                        <input type="text" value="Доставка по всей России — транспортные компании." style="width: 100%; padding: 10px; border: 1px solid var(--Gray); border-radius: 5px; color: var(--Graphite);">
+                    </div>
+
+                    <!-- Карточка 5 -->
+                    <div class="admin-feature-card">
+                        <div class="admin-card-actions">
+                            <img src="img/icon-check.svg" alt="Активно">
+                            <img src="img/icon-trash.svg" alt="Удалить">
+                        </div>
+                        <div style="position: relative;">
+                            <img src="img/feature-5.svg" class="admin-img-placeholder" alt="Фото">
+                            <button class="btn-small">Вставить фото</button>
+                        </div>
+                        <input type="text" value="Индивидуальная разработка — под любую модель." style="width: 100%; padding: 10px; border: 1px solid var(--Gray); border-radius: 5px; color: var(--Graphite);">
+                    </div>
+
+                    <!-- Карточка 6 -->
+                    <div class="admin-feature-card">
+                        <div class="admin-card-actions">
+                            <img src="img/icon-check.svg" alt="Активно">
+                            <img src="img/icon-trash.svg" alt="Удалить">
+                        </div>
+                        <div style="position: relative;">
+                            <img src="img/feature-6.svg" class="admin-img-placeholder" alt="Фото">
+                            <button class="btn-small">Вставить фото</button>
+                        </div>
+                        <input type="text" value="Специализация на китайском автопроме — JAC, Haval и др." style="width: 100%; padding: 10px; border: 1px solid var(--Gray); border-radius: 5px; color: var(--Graphite);">
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-header-subtitle">каталог</div>
+
+            <!-- Секция "Каталог" -->
+            <div class="admin-section">
+                <!-- Товар 1 -->
+                <div class="admin-catalog-item">
+                    <img src="img/product-jac.png" class="admin-catalog-img" alt="Товар 1">
+                    <div class="admin-catalog-content">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <button class="btn-dark" style="padding: 5px 15px; font-size: 14px; border-radius: 5px;">выбрать картинку</button>
+                            <div style="display: flex; gap: 10px;">
+                                <img src="img/icon-check.svg" alt="Сохранить">
+                                <img src="img/icon-trash.svg" alt="Удалить">
+                            </div>
+                        </div>
+                        <textarea placeholder="Редактировать текст карточки"></textarea>
+                    </div>
+                </div>
+
+                <!-- Товар 2 -->
+                <div class="admin-catalog-item">
+                    <img src="img/product-haval.png" class="admin-catalog-img" alt="Товар 2">
+                    <div class="admin-catalog-content" style="justify-content: center;">
+                        <textarea style="min-height: 80px;"></textarea>
+                    </div>
+                    <div class="catalog-actions">
+                        <img src="img/icon-trash.svg" alt="Удалить">
+                        <img src="img/icon-edit.svg" alt="Редактировать">
+                    </div>
+                </div>
+
+                <!-- Товар 3 -->
+                <div class="admin-catalog-item">
+                    <img src="img/product-custom.png" class="admin-catalog-img" alt="Товар 3">
+                    <div class="admin-catalog-content" style="justify-content: center;">
+                        <textarea style="min-height: 80px;"></textarea>
+                    </div>
+                    <div class="catalog-actions">
+                        <img src="img/icon-trash.svg" alt="Удалить">
+                        <img src="img/icon-edit.svg" alt="Редактировать">
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-dark" style="align-self: center; margin-top: 20px;" onclick="logout()">Выйти из админки</button>
+        </div>
+    </div>
+
+    <script>
+        // Переключатели на основном сайте
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleContainers = document.querySelectorAll('.material-toggles, .material-group');
+            toggleContainers.forEach(container => {
+                const buttons = container.querySelectorAll('button');
+                buttons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        buttons.forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+            });
+        });
+
+        // Логика переключения экранов
+        const mainSite = document.getElementById('main-site');
+        const loginScreen = document.getElementById('login-screen');
+        const adminPanel = document.getElementById('admin-panel');
+
+        function showLogin() {
+            mainSite.style.display = 'none';
+            adminPanel.style.display = 'none';
+            loginScreen.style.display = 'flex';
+        }
+
+        function hideLogin() {
+            loginScreen.style.display = 'none';
+            mainSite.style.display = 'block';
+        }
+
+        function doLogin() {
+            const user = document.getElementById('login-user').value;
+            const pass = document.getElementById('login-pass').value;
+
+            if (user === 'admin' && pass === '1234') {
+                loginScreen.style.display = 'none';
+                mainSite.style.display = 'none';
+                adminPanel.style.display = 'flex';
+            } else {
+                alert('Неверный логин или пароль!\nЛогин: admin\nПароль: 1234');
+            }
+        }
+
+        function logout() {
+            adminPanel.style.display = 'none';
+            mainSite.style.display = 'block';
+            document.getElementById('login-user').value = '';
+            document.getElementById('login-pass').value = '';
+        }
+    </script>
+</body>
+
+</html>
