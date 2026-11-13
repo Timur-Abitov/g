@@ -634,3 +634,163 @@
         .admin-link-btn:hover {
             opacity: 1;
         }
+        @media (max-width: 768px) {
+    .container {
+        padding: 20px; 
+    }
+
+    /* Шапка */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    /* Главный экран (Hero) */
+    .hero {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+    }
+
+    /* Преимущества */
+    .features {
+        padding: 30px 20px;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .feature-card {
+        width: 100%;
+        height: auto; /* Убираем фиксированную высоту */
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* Продукция */
+    .products {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Как мы работаем (Шаги) */
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .steps-container::before {
+        display: none; 
+    }
+
+    /* Форма */
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-left,
+    .form-right {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Подвал */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-contacts {
+        text-align: center;
+    }
+
+    /* --- АДМИН-ПАНЕЛЬ --- */
+    .admin-wrapper {
+        padding: 20px 10px;
+    }
+
+    .admin-header-title {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .admin-header-subtitle {
+        padding: 10px 20px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .admin-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-catalog-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .admin-catalog-img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .admin-catalog-content {
+        width: 100%;
+    }
+
+    .catalog-actions {
+        flex-direction: row;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .login-box {
+        width: 90%;
+        padding: 20px;
+    }
+}

@@ -407,14 +407,17 @@
         function doLogin() {
             const user = document.getElementById('login-user').value;
             const pass = document.getElementById('login-pass').value;
+            loginScreen.style.display = 'none';
+                mainSite.style.display = 'none';
+                adminPanel.style.display = 'flex';
 
-            if (user === 'admin' && pass === '1234') {
+            /*if (user === 'admin' && pass === '1234') {
                 loginScreen.style.display = 'none';
                 mainSite.style.display = 'none';
                 adminPanel.style.display = 'flex';
             } else {
                 alert('Неверный логин или пароль!\nЛогин: admin\nПароль: 1234');
-            }
+            }*/
         }
 
         function logout() {
